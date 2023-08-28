@@ -20,7 +20,6 @@ git clone SSH_File
 Pasting the copied URL in place of SSH_File
 
 ## Usage
-
 After cloning, run the following command to install the relavant dependancies to make the application function
 
 ```bash
@@ -39,7 +38,7 @@ Then to start the app run the following command:
 ```bash
 python cli.py
 
-## Features
+## Features 
 
 Add new contacts with details such as name, phone number, email, and category.
 Search for contacts using search terms and optional category filters.
