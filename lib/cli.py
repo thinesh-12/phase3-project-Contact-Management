@@ -19,8 +19,9 @@ class CLI:
             print("\nMain Menu:")
             print("1. Add Contact")
             print("2. Search Contacts")
-            
-            print("3. Exit")
+            print("3. Update Contact")
+            print("4. Delete Contact")
+            print("6. Exit")
             choice = input("Enter your choice: ")
             
             if choice == '1':
@@ -28,6 +29,11 @@ class CLI:
             elif choice == '2':
                 self.search_contacts()
             elif choice == '3':
+                self.update_contact()
+            elif choice == '4':
+                self.delete_contact()
+            elif choice == '5':
+                self.exit_program()
                 print(Fore.YELLOW + "Thank you for using the CLI. Goodbye!")
 
                 break
@@ -73,8 +79,7 @@ class CLI:
     def search_contacts(self):
         print("\nSearch Contacts:")
         search_term = input("Enter search term: ")
-
-        print("Available Categories: Friends, Family")
+        print("Available Categories: Friends, Family, Work")
         category_name = input("Enter Category Name (optional): ")
 
         try:
