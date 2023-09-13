@@ -1,23 +1,16 @@
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey 
+from sqlalchemy.orm import  relationship
+from sqlalchemy.ext.declarative import declarative_base
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, relationship, sessionmaker
-from sqlalchemy import (
-    Column,
-    Integer,
-    String,
-    ForeignKey,
-    create_engine
-)
 
 Base = declarative_base()
 engine = create_engine('sqlite:///contacts.db')
-Session = sessionmaker(bind=engine)
 
 class User(Base):
     __tablename__ = 'users'
     
     id = Column(Integer, primary_key=True)
-    username = Column(String, unique=True, nullable=False)
+    username = Column(String, nullable=False)
     password = Column(String, nullable=False)
     
     contacts = relationship('Contact', back_populates='user')
@@ -26,13 +19,13 @@ class Category(Base):
     __tablename__ = 'categories'
     
     id = Column(Integer, primary_key=True)
-    name = Column(String, )
-    
+    name = Column(String, unique=True, nullable=False)
+
     contacts = relationship('Contact', back_populates='category')
 
 class Contact(Base):
     __tablename__ = 'contacts'
-    
+
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     phone = Column(String)
