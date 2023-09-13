@@ -14,29 +14,30 @@ It uses SQLAlchemy for database management and provides a user-friendly command-
 After Forking, and copying the SSH, navigate to the folder you wish to clone the repo into and run:
 
 ```bash
-git clone SSH_File
+git clone git@github.com:thinesh-12/phase3-project-Contact-Management.git
 ```
-
-Pasting the copied URL in place of SSH_File
 
 ## Usage
 After cloning, run the following command to install the relavant dependancies to make the application function
 
+#Install Dependencies
+Once you've cloned the repository, navigate into the project folder and install the required dependencies using pipenv:
 ```bash
 pipenv install && pipenv shell
 ```
 
-pipenv shell will navigate us into the virtual environment where the application will run.
-
+#Seed Database (Optional):
 To seed the database with some fake data to test out the features of the app run the following (optional) command:
-
 ```bash
 python seeds.py
+```
 
+#Run the Application:
 Then to start the app run the following command:
 
 ```bash
 python cli.py
+```
 
 ## Features 
 
