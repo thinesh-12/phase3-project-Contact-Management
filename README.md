@@ -1,6 +1,6 @@
-## Contact Management CLI
+# Contact Management CLI
 
-# Phase3 CLI Project
+## Phase3 CLI Project
 
 A simple CLI application for managing contacts built using Python, SQLAlchemy, and the command-line interface.
 
@@ -20,19 +20,19 @@ git clone git@github.com:thinesh-12/phase3-project-Contact-Management.git5
 ## Usage
 After cloning, run the following command to install the relavant dependancies to make the application function
 
-# Install Dependencies
+## Install Dependencies
 Once you've cloned the repository, navigate into the project folder and install the required dependencies using pipenv:
 ```bash
 pipenv install && pipenv shell
 ```
 
-# Seed Database (Optional):
+## Seed Database (Optional):
 To seed the database with some fake data to test out the features of the app run the following (optional) command:
 ```bash
 python seeds.py
 ```
 
-# Run the Application:
+##S Run the Application:
 Then to start the app run the following command:
 
 ```bash
